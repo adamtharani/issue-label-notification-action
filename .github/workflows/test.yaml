@@ -2,15 +2,17 @@ name: Notify users based on issue labels
 
 on:
   issues:
-      types: [labeled]
+    types: [labeled]
 
 jobs:
   notify:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
     steps:
-        - uses: adamtharani/issue-label-notification-action@master
-          with:
-             recipients: |
-                  help wanted=@adamtharani
-                  documentation=@adamtharani
-                  bug=@adamtharani
+      - uses: adamtharani/issue-label-notification-action@master
+        with:
+          recipients: |
+            help wanted=@adamtharani
+            documentation=@adamtharani
+            bug=@adamtharani
