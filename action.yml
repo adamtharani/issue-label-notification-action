@@ -12,7 +12,7 @@ inputs:
     description: 'The message to post in the issue comment.'
     default: 'Heads up {recipients} - the **{label}** label was applied to this issue.'
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
 
 branding:
