@@ -15,6 +15,6 @@ jobs:
       - uses: adamtharani/issue-label-notification-action@master
         with:
           recipients: |
-            help wanted=@adamtharani
+            help wanted=@adamtharani @nmsean
             documentation=@adamtharani
             bug=@adamtharani
